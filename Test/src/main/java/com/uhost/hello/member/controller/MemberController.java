@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -84,5 +86,11 @@ public class MemberController {
 		mv.setViewName("jsonView");
 		
 		return mv;
+	}
+	
+	@RequestMapping("echart.me")
+	public String echart(HttpServletRequest request) {
+		
+		return "/views/main/echart.jsp";
 	}
 }
